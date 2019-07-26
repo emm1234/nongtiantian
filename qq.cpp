@@ -1,9 +1,9 @@
 #include<stdio.h>
-int s,j,k,h,n,m;
-float bestp=0,cp=0,b;//n是物品的个数，m物品的属性个数，bestp目前最优值,cp当前价值；
-float p[5000],a[5000][5000],z[2000],bestcp[1000];//物品的价值，存储数据,约束总值；
+int s,j,k,h,n,m;//n是物品的个数，m物品的属性个数;
+float bestp=0,cp=0,b;//bestp目前最优值,cp当前价值；
+float p[5000],a[5000][5000],z[2000],bestcp[1000];//物品的价值，物品的属性条件,约束总值，将bestp的值存入bestpcp[]；
 void  Backtrack(int i,float z[])
-{ //cp当前包内物品价值
+{ 
     if(i>n)//回溯结束,到达叶子结点
     {
         if(cp>bestp)//当前价值大于目前最优值
